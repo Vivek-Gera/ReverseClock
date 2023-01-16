@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0%;
+            padding: 0%;
+            box-sizing: border-box;
+            font-family: roboto;
+        }
+
+        .container {
+            overflow: hidden;
+            position: relative;
+            height: 100vh;
+            width: 100vw;
+            background-color: rgba(190, 0, 127, 0.315);
+        }
+
+        .shadow {
+            position: absolute;
+            z-index: -1;
+            top: 50%;
+            left: 50%;
+            height: 300vh;
+            width: 300vw;
+            background: conic-gradient(from 180deg at 50% 50%, #000000 0deg, rgba(255, 255, 255, 0) 360deg);
+            transform: translate(-50%, -50%);
+            animation: rotate1 4s linear infinite;
+        }
+
+        @keyframes rotate1 {
+            0% {
+                transform: translate(-50%, -50%) rotate(0deg);
+            }
+
+            100% {
+                transform: translate(-50%, -50%) rotate(-360deg);
+            }
+
+        }
+
+        .container header {
+            display: flex;
+            padding: 3em 5em 1em 5em;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .container header>a {
+            all: unset;
+            font-weight: 600;
+            font-size: 1.4rem;
+            color: rgb(78, 0, 72);
+        }
+
+        nav ul {
+            width: max-content;
+            display: flex;
+            align-self: center;
+        }
+
+        nav ul li {
+            list-style: none;
+        }
+
+        nav ul li>a {
+            text-transform: capitalize;
+            margin: 0% 1.4em;
+            text-decoration: none;
+            color: rgb(255, 212, 250);
+        }
+
+        nav ul li>a.start {
+            padding: 4px 10px;
+            border: 1px outset rgb(212, 212, 212);
+        }
+
+        main {
+            width: 500px;
+            margin: 2.4em 0%;
+            padding-left: 6em;
+        }
+
+        .hero h1 {
+            font-size: 5rem;
+            color: rgb(255 175 228);
+        }
+
+        .hero p {
+            margin-top: 1em;
+            font-size: 12px;
+            color: rgb(255, 190, 246);
+        }
+
+        .hero h1 i {
+            color: rgb(78, 0, 72);
+            font-style: normal;
+        }
+
+        .price_container {
+            margin-top: 1.6em;
+            display: flex;
+            /* background: darkcyan; */
+            justify-content: space-around;
+        }
+
+        .price_item h4 {
+            font-size: 2em;
+            color: rgb(255, 212, 251);
+        }
+
+        .price_item p {
+            font-size: 10px;
+            color: #ffddfc;
+            width: 70px;
+            padding: 0% 1.2em;
+        }
+
+        .price_item {
+            display: flex;
+            align-items: center;
+        }
+
+        .buy {
+            text-decoration: none;
+            display: inline-block;
+            font-size: 1.4rem;
+            padding: 4px 32px;
+            margin-top: 1rem;
+            background: rgb(80, 0, 63);
+            color: #ffddfc;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <a href="">My Clock</a>
+            <nav>
+                <ul>
+                    <li><a href="/">home</a></li>
+                    <li><a href="/">store</a></li>
+                    <li><a href="/">premium</a></li>
+                    <li><a href="/">about</a></li>
+                    <li><a class="start" href="/">Explore now</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <div class="hero">
+                <h1>Don't wait its <i>Ticking</i>.</h1>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa, vel itaque facere accusantium at,
+                    voluptatem officia debitis vitae, fds dsfdsf sdsfwe fd arem repudiandae.
+                </p>
+
+                <div class="price_container">
+                    <div class="price_item">
+                        <h4>8748</h4>
+                        <p>min are left</p>
+                    </div>
+                    <div class="price_item">
+                        <h4>$499</h4>
+                        <p>One Time Offer</p>
+                    </div>
+                </div>
+                <a class="buy" href="">Buy now</a>
+            </div>
+        </main>
+        <div class="shadow"></div>
+    </div>
+</body>
+
+</html>
